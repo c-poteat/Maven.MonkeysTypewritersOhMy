@@ -15,7 +15,5 @@ public class SafeCopier extends Copier {
             copied = copied + " ";
         }
 
-        //Finish the SafeCopier and then call that from the main method, in addition to the unsafe version.
-
     }
 }

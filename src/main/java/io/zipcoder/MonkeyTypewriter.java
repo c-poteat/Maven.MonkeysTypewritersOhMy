@@ -1,5 +1,7 @@
 package io.zipcoder;
 
+import java.util.Arrays;
+
 public class MonkeyTypewriter {
     public static void main(String[] args) {
         String introduction = "It was the best of times,\n" +
@@ -33,7 +35,6 @@ public class MonkeyTypewriter {
         monkey4.start();
         Thread monkey5 = new Thread(reallyUnsafe);
         monkey5.start();
-        System.out.println("Ending threads");
 
 
         SafeCopier safeCopier = new SafeCopier(introduction);
@@ -41,25 +42,29 @@ public class MonkeyTypewriter {
         monkey6.start();
         Thread monkey7 = new Thread(safeCopier);
         monkey7.start();
+        Thread monkey8 = new Thread(safeCopier);
+        monkey8.start();
+        Thread monkey9 = new Thread(safeCopier);
+        monkey9.start();
+        Thread monkey10 = new Thread(safeCopier);
+        monkey10.start();
 
         // Modify MonkeyTypewriter to create 5 monkeys (threads) using the UnsafeCopier and start them.
-
         // Do all of the Monkey / Thread building here
         // For each Copier(one safe and one unsafe), create and start 5 monkeys copying the introduction to
         // A Tale Of Two Cities.
-
-
         // This wait is here because main is still a thread and we want the main method to print the finished copies
         // after enough time has passed.
         try {
-            Thread.sleep(1);
+            Thread.sleep(1000);
         } catch(InterruptedException e) {
             System.out.println("MAIN INTERRUPTED");
         }
-        System.out.println(reallyUnsafe.copied);
-        System.out.println(safeCopier.copied);
         // Print out the copied versions here.
         //After the sleep, print out the results of the unsafely copied passage.
+        System.out.println(reallyUnsafe.copied);
+        System.out.println(safeCopier.copied);
+
     }
 }
 
