@@ -18,4 +18,13 @@ public abstract class Copier implements Runnable {
     }
 
     public abstract void run();
+    
 }
+
+
+//        Extend Copier in UnsafeCopier. Then, write a run method that will have the monkey grab the next
+//        word and append it to the copy.
+//
+//        Modify MonkeyTypewriter to create 5 monkeys (threads) using the UnsafeCopier and start them.
+//
+//        After the sleep, print out the results of the unsafely copied passage.

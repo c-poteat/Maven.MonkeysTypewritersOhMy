@@ -10,5 +10,11 @@ public class UnsafeCopier extends Copier {
     }
 
     public void run() {
+        while (stringIterator.hasNext()) {
+            copied = copied + stringIterator.hasNext();
+            copied = copied + " ";
+        }
+        // Write a run method that will have the monkey grab the next word and append it to the copy.
+
     }
 }
